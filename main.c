@@ -13,16 +13,16 @@ int main(int argc, char *argv[]) {
     }
     //check first argv
 
-    if((&argv[argc-1][len-4]==".csv"))
-    {
-         //check if there is an .csv file if not early exit
-        filename=argv[argc-1];
-    }
-    else{
+      char *csvarr= ".csv";
+   for (int i=argc-4, j=0; i<argc; i++,j++){
+       if(csvarr[j]!=(argv[argc-1][i])){
             printf("Missing csv file last input is not csv");
-            exit(EXIT_FAILURE)
-            
-        }
+            exit(EXIT_FAILURE);
+       }
+    }
+//check if there is an .csv file if not early exit
+        filename=argv[argc-1];
+    
 
 
     for (int i = 1; i < (argc-1); i++) {
