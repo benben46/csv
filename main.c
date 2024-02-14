@@ -13,7 +13,7 @@ int main(int argc, char *argv[]) {
     }
     //check first argv
 
-    if((&argv[][len-4]==".csv"))
+    if((&argv[argc-1][len-4]==".csv"))
     {
          //check if there is an .csv file if not early exit
         filename=argv[argc-1];
@@ -67,8 +67,8 @@ int main(int argc, char *argv[]) {
             printf("Flag -records field value\n");
             record_field=argv[i+1];
             record_value=argv[i+2];
-            printf("record_field%d\n",record_field);
-            printf("record_value%d\n",record_value);
+            printf("record_field%s\n",record_field);
+            printf("record_value%s\n",record_value);
             //not sure what to do with record_field and record value so keeping them as strings for now
             i=i+2;
         }
