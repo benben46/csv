@@ -17,7 +17,7 @@ int main(int argc, char *argv[]) {
         exit(EXIT_FAILURE);
     }
     //check first argv
-   
+
     char *csvarr= ".csv";
    for (int i=strlen(argv[argc-1])-4, j=0; i<strlen(argv[argc-1]); i++,j++){
          // printf("1%c\n",argv[argc-1][i]);
